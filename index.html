@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Script do mapa -->
+<script src="js/contact.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+  <title>Portfólio</title>
+</head>
+
+<body>
+  <!-- ASIDE -->
+  <div class="aside-container">
+    <img src="img/profile.jpg" alt="">
+    <div class="name">
+      <h2>Beatriz Monteiro</h2>
+    </div>
+    <div class="aside-context">
+      <div class="aside-title">Web Dev</div>
+    </div>
+
+    <hr>
+    <div class="container" onclick="copiarTexto('beatrizmonteirovieira@outlook.com')">
+        <span class="icon">
+            <span class="material-symbols-outlined">mail</span>
+        </span>
+        <span class="legenda">
+            beatrizmonteirovieira@outlook.com
+        </span>
+    </div>
+    <div class="container" onclick="copiarTexto('(11) 9 13437-7746')">
+        <span class="icon">
+            <span class="material-symbols-outlined">call</span>
+        </span>
+        <span class="legenda">
+            (11) 91343-7746
+        </span>
+    </div>
+    <div class="container">
+        <span class="icon">
+            <span class="material-symbols-outlined">location_on</span>
+        </span>
+        <span class="legenda">
+            São Paulo, SP - Brasil
+        </span>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://github.com/seuusuario" target="_blank" class="social-icon github">
+        <img src="img\github-mark-white.png" alt="GitHub">
+      </a>
+      <a href="https://linkedin.com/in/seuusuario" target="_blank" class="social-icon linkedin">
+        <img src="img\InBug-White.png" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="main-container">
+    <header>
+      <nav>
+        <a href="javascript:void(0)" onclick="carregarConteudo('about.html')">Sobre</a>
+        <a href="javascript:void(0)" onclick="carregarConteudo('resume.html')">Currículo</a>
+        <a href="javascript:void(0)" onclick="carregarConteudo('portfolio.html')">Portfolio</a>
+        <a href="javascript:void(0)" onclick="carregarConteudo('contact.html')">Contato</a>
+        
+      </nav>
+    </header>
+
+    <div id="conteudo-principal"></div>
+
+    
+  </div>
+
+  <script>
+    function carregarConteudo(arquivo) {
+      fetch(arquivo)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('conteudo-principal').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar o conteúdo: ', error));
+    }
+
+    window.onload = function() {
+      carregarConteudo('about.html');
+    };
+
+    function copiarTexto(texto) {
+      navigator.clipboard.writeText(texto);
+    }
+
+    function carregarConteudo(arquivo) {
+  fetch(arquivo)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('conteudo-principal').innerHTML = data;
+
+      if (arquivo === 'contact.html') {
+        carregarMapa();
+      }
+    })
+    .catch(error => console.error('Erro ao carregar o conteúdo: ', error));
+}
+  </script>
+</body>
+
+</html>

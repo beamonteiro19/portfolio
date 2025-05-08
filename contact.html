@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="style/contact.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js\contact.js"></script>
+</head>
+
+<div class="contato-container">
+  <h2>Contato</h2>
+  <hr>
+
+  <!-- Mapa -->
+  <div id="map" style="height: 300px; border-radius: 12px; margin-bottom: 20px;"></div>
+
+  <!-- Formulário -->
+  <form class="contact-form" method="POST" action="https://formsubmit.co/beatrizmonteirovieira@outlook.com">
+    <input type="text" class="placeholder-input" name="name" placeholder="Nome completo" required>
+    <input type="email" class="placeholder-input" name="email" placeholder="E-mail" required>
+    <textarea class="placeholder-input" name="message" rows="5" placeholder="Mensagem" required></textarea>
+    
+    <div class="btn-container">
+      <button type="submit" class="send-message">
+        <span class="material-symbols-outlined">send</span> Enviar Mensagem
+      </button>
+    </div>
+  </form>
+</div>
+
