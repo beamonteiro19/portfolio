@@ -1,0 +1,48 @@
+[
+    {
+      "imagem": "img/profile.jpg",
+      "titulo": "Site Pessoal",
+      "categoria": "Desenvolvimento Web"
+    },
+    {
+      "imagem": "img/profile.jpg",
+      "titulo": "Site Pessoal",
+      "categoria": "Desenvolvimento Web"
+    },
+    {
+      "imagem": "img/profile.jpg",
+      "titulo": "Site Pessoal",
+      "categoria": "Desenvolvimento Web"
+    },
+    {
+      "imagem": "img/profile.jpg",
+      "titulo": "Site Pessoal",
+      "categoria": "Desenvolvimento Web"
+    },
+    {
+      "imagem": "img/profile.jpg",
+      "titulo": "Site Pessoal",
+      "categoria": "Desenvolvimento Web"
+    },
+    {
+      "imagem": "img/app.jpg",
+      "titulo": "App de Tarefas",
+      "categoria": "Desenvolvimento Mobile"
+    },
+    {
+      "imagem": "img/landing.jpg",
+      "titulo": "Landing Page",
+      "categoria": "Web Design"
+    },
+    {
+      "imagem": "img/loja.jpg",
+      "titulo": "Loja Virtual",
+      "categoria": "E-commerce"
+    },
+    {
+      "imagem": "img/blog.jpg",
+      "titulo": "Blog Tech",
+      "categoria": "Sites"
+    }
+  ]
+  

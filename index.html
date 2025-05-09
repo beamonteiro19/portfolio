@@ -51,10 +51,10 @@
     </div>
 
     <div class="social-icons">
-      <a href="https://github.com/seuusuario" target="_blank" class="social-icon github">
+      <a href="https://github.com/beamonteiro19" target="_blank" class="social-icon github">
         <img src="img\github-mark-white.png" alt="GitHub">
       </a>
-      <a href="https://linkedin.com/in/seuusuario" target="_blank" class="social-icon linkedin">
+      <a href="https://www.linkedin.com/in/beatriz-monteiro-1b06321ba/" target="_blank" class="social-icon linkedin">
         <img src="img\InBug-White.png" alt="LinkedIn">
       </a>
     </div>
@@ -80,34 +80,60 @@
   <script>
     function carregarConteudo(arquivo) {
       fetch(arquivo)
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('conteudo-principal').innerHTML = data;
+        .then(response => {
+          if (!response.ok) throw new Error('Erro ao carregar ' + arquivo);
+          return response.text();
         })
-        .catch(error => console.error('Erro ao carregar o conteúdo: ', error));
+        .then(html => {
+          const container = document.getElementById('conteudo-principal');
+          container.innerHTML = html;
+  
+          // Se for portfolio.html, carregue e execute o script loadCards.js
+          if (arquivo === 'portfolio.html') {
+            carregarScriptDinamico('js/loadCards.js');
+          }
+  
+          // Se for contact.html, aguarde e chame a função do mapa
+          if (arquivo === 'contact.html') {
+            setTimeout(() => {
+              if (typeof carregarMapa === 'function') {
+                carregarMapa();
+              }
+            }, 100);
+          }
+        })
+        .catch(error => {
+          console.error(error);
+          document.getElementById('conteudo-principal').innerHTML = "<p>Erro ao carregar o conteúdo.</p>";
+        });
     }
-
-    window.onload = function() {
+  
+    function carregarScriptDinamico(src) {
+      const antigo = document.querySelector(`script[src="${src}"]`);
+      if (antigo) {
+        antigo.remove();
+      }
+  
+      const novoScript = document.createElement('script');
+      novoScript.src = src;
+      novoScript.type = 'text/javascript';
+      novoScript.defer = true;
+  
+      document.body.appendChild(novoScript);
+    }
+  
+    // Garante que o conteúdo de "Sobre" carregue inicialmente
+    window.addEventListener('load', () => {
       carregarConteudo('about.html');
-    };
-
+    });
+  
     function copiarTexto(texto) {
       navigator.clipboard.writeText(texto);
     }
-
-    function carregarConteudo(arquivo) {
-  fetch(arquivo)
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('conteudo-principal').innerHTML = data;
-
-      if (arquivo === 'contact.html') {
-        carregarMapa();
-      }
-    })
-    .catch(error => console.error('Erro ao carregar o conteúdo: ', error));
-}
   </script>
+  
+  
+  
 </body>
 
 </html>
