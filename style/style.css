@@ -6,7 +6,16 @@
 }
 
 body {
-  background-color: #0d1117;
+  background: conic-gradient(
+  from 0deg at 50% 50%,
+  #0d1117,
+  #13161d,
+  #1a1e23,
+  #21262d,
+  #1c1f26,
+  #0f1219,
+  #0d1117
+);
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -77,9 +86,10 @@ img {
 }
 
 .main-container {
-  background: #1c1f26;
+  background: #161b22;
   width: 900px;
   height: 90vh;
+  min-height: 90vh;
   border-radius: 20px;
   padding: 0 0 25px 25px;
   overflow-y: auto;
@@ -138,15 +148,6 @@ a* {
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background-color: #0d1117;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  color: #f0f0f0;
 }
 
 /* ASIDE (Sidebar) */

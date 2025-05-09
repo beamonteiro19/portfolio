@@ -1,11 +1,13 @@
-.contato-container {
+.contact-container {
   color: white;
   border-radius: 12px;
   max-width: 800px;
-  margin: 20px;
   margin-right:25px
 }
 
+h2.contact{
+  margin-top: 20px;
+}
 
 .contact-form {
   display: flex;
