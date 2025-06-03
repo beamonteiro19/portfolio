@@ -1,48 +1,81 @@
 [
-    {
-      "imagem": "img/profile.jpg",
-      "titulo": "Site Pessoal",
-      "categoria": "Desenvolvimento Web"
-    },
-    {
-      "imagem": "img/profile.jpg",
-      "titulo": "Site Pessoal",
-      "categoria": "Desenvolvimento Web"
-    },
-    {
-      "imagem": "img/profile.jpg",
-      "titulo": "Site Pessoal",
-      "categoria": "Desenvolvimento Web"
-    },
-    {
-      "imagem": "img/profile.jpg",
-      "titulo": "Site Pessoal",
-      "categoria": "Desenvolvimento Web"
-    },
-    {
-      "imagem": "img/profile.jpg",
-      "titulo": "Site Pessoal",
-      "categoria": "Desenvolvimento Web"
-    },
-    {
-      "imagem": "img/app.jpg",
-      "titulo": "App de Tarefas",
-      "categoria": "Desenvolvimento Mobile"
-    },
-    {
-      "imagem": "img/landing.jpg",
-      "titulo": "Landing Page",
-      "categoria": "Web Design"
-    },
-    {
-      "imagem": "img/loja.jpg",
-      "titulo": "Loja Virtual",
-      "categoria": "E-commerce"
-    },
-    {
-      "imagem": "img/blog.jpg",
-      "titulo": "Blog Tech",
-      "categoria": "Sites"
-    }
-  ]
-  
+  {
+    "titulo": "CinePass",
+    "categoria": "Desenvolvimento Mobile",
+    "descricao": "CinePass é um aplicativo Android desenvolvido em Java, focado em reservas de sessões de cinema. <br> <strong>Funcionalidades:</strong> Inclui telas de login, cadastro, seleção de assentos, geração de QR Code e visualização de sessões.",
+    "imagem": "img/cinepass/capa.png",
+    "imagens": [
+      "img/cinepass/inicio.jpg",
+      "img/cinepass/cadastro.jpg",
+      "img/cinepass/homepage.jpg",
+      "img/cinepass/perfil.jpg",
+      "img/cinepass/sessoes.jpg",
+      "img/cinepass/assentos.jpg",
+      "img/cinepass/qrcode.jpg"
+    ],
+    "tecnologias": ["Java", "XML", "Firebase"],
+    "github": "https://github.com/beamonteiro19/CinePass"
+  },
+  {
+    "titulo": "Empresta-ai",
+    "categoria": "Desenvolvimento Web/Desktop",
+    "descricao": "<strong>Descrição:</strong> Sistema de gerenciamento de empréstimos de livros.<br><strong>Funcionalidades:</strong> Permite cadastro de livros, usuários e controle de empréstimos.",
+    "imagem": "img/emprestai/capa-emprestai.png",
+    "imagens": [
+      "img/emprestai/capa.png",
+      "img/emprestai/lista livros.png",
+      "img/emprestai/adicionar livros.png",
+      "img/emprestai/lista emprestimos.png",
+      "img/emprestai/usuarios.png",
+      "img/emprestai/adicionar usuarios.png"
+    ],
+    "tecnologias": ["Kotlin Multipllataforma", "CSS", "JavaScript", "React"],
+    "github": "https://github.com/sZmanu/biblioteca-emprestai"
+  },
+  {
+    "titulo": "Nova 4E",
+    "categoria": "Desenvolvimento Web/Desktop",
+    "descricao": "<strong>Descrição:</strong> O sistema Nova 4E, desenvolvido pelos alunos do 4º semestre do curso de Desenvolvimento de Software Multiplataforma (DSM) da Fatec Itaquera, tem como objetivo divulgar e apoiar o trabalho filantrópico da ONG, ampliando seu alcance e fortalecendo sua presença digital. <br> <br>A Nova 4E – Entidade Especializada em Pessoas Especiais é uma organização filantrópica sem fins lucrativos, fundada em 23 de agosto de 1967 por um grupo de pais preocupados em oferecer atendimento especializado e de qualidade a seus filhos com deficiência intelectual. Desde então, a instituição atua como um núcleo de apoio à inclusão social, promovendo a autonomia e a cidadania de seus usuários.",
+    "imagem": "img/nova4e/capa.png",
+    "imagens": [
+      "img/nova4e/inicio.png",
+      "img/nova4e/sobre.png",
+      "img/nova4e/eventos.png",
+      "img/nova4e/feedback.png",
+      "img/nova4e/voluntarios.png",
+      "img/nova4e/seja volutnario.png",
+      "img/nova4e/login.png"
+      
+    ],
+    "tecnologias": ["JavaScript", "CSS", "PHP"],
+    "github": "https://github.com/Nath-Sant/Sistema-4E"
+  },
+  {
+    "titulo": "Clone Kindle",
+    "categoria": "Desenvolvimento Mobile",
+    "descricao": "<strong>Descrição:</strong> Projeto criado com Expo (React Native) como um app de demonstração. <br><strong>Funcionalidades:</strong>  Permite a pesquisa de livros cadastrados no app.",
+    "imagem": "img/kindle/capakindle.png",
+    "imagens": [
+      "img/kindle/inicio.jpg",
+      "img/kindle/pesquisa.jpg"
+    ],
+    "tecnologias": ["JavaScript", "React"],
+    "github": "https://github.com/beamonteiro19/Kindle"
+  },
+  {
+    "titulo": "Quiz das Bandeiras",
+    "categoria": "Desenvolvimento Mobile",
+    "descricao": "<strong>Descrição:</strong> Aplicativo Android em Java que desafia os usuários a identificar bandeiras de países menos conhecidos. <br><strong>Funcionalidades:</strong> Tela principal com entrada de nome, quiz com perguntas sobre bandeiras e caixa de diálogo para saída.",
+    "imagem": "img/quizdasbandeiras/capa.png",
+    "imagens": [
+      "img/quizdasbandeiras/homepage.png",
+      "img/quizdasbandeiras/quiz.png",
+      "img/quizdasbandeiras/resultado.png",
+      "img/quizdasbandeiras/versao.png",
+      "img/quizdasbandeiras/sair.png"
+    ],
+    "tecnologias": ["Java", "Android"],
+    "github": "https://github.com/beamonteiro19/QuizDasBandeiras"
+  }
+
+]

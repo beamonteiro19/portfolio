@@ -5,6 +5,12 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+:root {
+  --bg-dark: #0d1117;
+  --text-light: #f0f0f0;
+  --primary-accent: #58a6ff;
+}
+
 body {
   background: conic-gradient(
   from 0deg at 50% 50%,
@@ -261,7 +267,6 @@ nav a:hover {
   color: #ffc400;
 }
 
-/* Scroll personalizado */
 .scroll-container::-webkit-scrollbar {
   height: 8px;
 }
@@ -274,10 +279,10 @@ nav a:hover {
 }
 .container {
   display: flex;
-  align-items: center; /* Alinha os itens verticalmente */
+  align-items: center;
 }
 .icone {
-  margin-right: 8px; /* Espaço entre o ícone e a legenda */
+  margin-right: 8px;
 }
 .social-icons {
   display: flex;
@@ -304,4 +309,90 @@ nav a:hover {
 
 .social-icon:hover {
   background-color: #ccc;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .aside-container {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .aside-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .name h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .aside-title {
+    width: auto;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .container {
+    flex: 1 1 45%;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    min-height: auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    background-color: #1a1e23;
+    box-shadow: 0 0 20px #ffc40060;
+    border: 1px solid #ffc40030;
+  }
+
+  #conteudo-principal {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .aside-container img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #ffc400;
+    object-fit: cover;
+  }
 }

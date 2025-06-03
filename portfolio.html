@@ -1,21 +1,25 @@
 <head>
   <link rel="stylesheet" href="style/portfolio.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-<head>
-  <link rel="stylesheet" href="style/portfolio.css" />
-</head>
-<div class="portfolio-container">
-  <h2>Portfolio</h2>
-  <hr />
-  <a href="#" data-filter="Tudo" class="active">Tudo</a>
-  <a href="#" data-filter="Web Design">Web Design</a>
-  <a href="#" data-filter="Desenvolvimento Web">Desenvolvimento Web</a>
-  <a href="#" data-filter="Desenvolvimento Mobile">Desenvolvimento Mobile</a>
-
-  <div class="cards-container" id="cards-container">
-    <!-- Cards inseridos via JS -->
+<body>
+  <div class="portfolio-container" id="portfolio-container">
+    <h2>Portfolio</h2>
+    <hr />
+    <div class="portfolio-filters" id="portfolio-filters">
+      <a href="#" data-filter="Tudo" class="active">Tudo</a>
+      <a href="#" data-filter="Web Design">Web Design</a>
+      <a href="#" data-filter="Desenvolvimento Web/Desktop">Desenvolvimento Web/Desktop</a>
+      <a href="#" data-filter="Desenvolvimento Mobile">Desenvolvimento Mobile</a>
+    </div>
+  
+    <div class="cards-container" id="cards-container"></div>
+  
+    <div id="pagination" class="pagination"></div>
+  
+    <!-- Detalhes do projeto -->
+    <div id="project-detail" class="project-detail" style="display: none;"></div>
   </div>
-  <div id="pagination" class="pagination"></div>
-</div>
+  <script src="js/loadCards.js"></script>
+</body>
 
-<script src="js/loadCards.js"></script>
